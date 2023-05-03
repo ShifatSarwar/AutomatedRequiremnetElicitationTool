@@ -1,0 +1,127 @@
+name,data
+vehicle,The system must detect highway lane lines distinguish between dashed and straight lines and provide warning in case of loss of lanes.
+vehicle,The system must track objects around the vehicle using the scanner and algorithms and behave accordingly.
+vehicle,The sensors must monitor the position of objects around the vehicle as they move within the scanning range.
+vehicle,The system must recognize traffic signs and behave according to the color of light.
+vehicle,The system must adjust speed and position by detecting vehicles and tracking events.
+vehicle,The system must keep constant safe distance with a vehicle on front.
+vehicle,When a pedestrian step in front of the vehicle and a collision is possible sudden braking must be performed. When the obstacles pedestrians and vehicles on the road are lifted the vehicle accelerates to regain its speed.
+vehicle,The system must create a road planner that creates a safe trajectory for the vehicle to follow.
+vehicle,The system must be able to have knowledge of all the vehicles on the same side of the road without regards of their speeds.
+vehicle,The system must recognize emergency vehicles and let them pass ahead.
+vehicle,In the absence of lane markings (an unmarked lane dirt road bad weather etc.) the system becomes ineffective and must give the user an audible or visual warning.
+vehicle,If there is a problem with detecting sensors and camera the system must switch off and warns the user.
+vehicle,The autonomous car system needs to avoid accidents and shall not injure passengers.
+vehicle,The autonomous car system shall not start moving when its doors are still open and notify user when safety belt has not worn.
+vehicle,The vehicle needs to identify the system errors.
+vehicle,The system should work with maximum performance with minimum used energy and fuel.
+vehicle,The system needs to notify user in the dangerous situation and let the user take vehicle’s control when system not working well.
+vehicle,The vehicle needs to follow the traffic rules detects and responds to objects in its environment.
+vehicle,System should be able to handle many inputs from its environment in different challenging weather and traffic conditions.
+automated,The user interaction with the system is expected to be minimal.
+automated,The system should be able to receive and store data from various sources such as sensors or manual input.
+automated,The system should be able to perform calculations data transformations and other manipulations on the input data.
+automated,The system should reduce human error and increase efficiency.
+automated,The system should be able to communicate and exchange data with other systems or software.
+automated,The system should be able to generate reports and provide data analysis capabilities.
+common_sensitive_nfr,Ability to extend the system is limitless. New functionalities can be added to system anytime.
+common_sensitive_nfr,The system should work on Linux and Windows.
+common_sensitive_nfr,Every functionality on the code must be able to work smoothly in simulation environment.
+common_sensitive_nfr,The application should be designed for mobile devices and should be available on both iOS and Android platforms.
+sensitive_nfr,The system needs to take ethical decisions in case of emergency.
+sensitive_nfr,When an unpredictable failure occurs system need to recover briefly.
+sensitive_nfr,The system must be configured to respond to commands in X sec.
+interactive_website,Website must be able to accept and save data from users.
+interactive_website,Website must be adaptable to all device screen sizes.
+interactive_website,Website must be able to send and retrieve data to and from the database.
+interactive_website,Web server must have constant access to the internet.
+interactive_website,Website must always be available with limited to no downtime.
+interactive_website,System needs to be capable of handling no less than x transactions per day.
+interactive_website,The system should be able to support x simultaneous users.
+interactive_website,Website must have quick response and processing times.
+interactive_website,All users must be able to interact seamlessly with website elements (Search bars Buttons Menus Text Input Fields etc).
+interactive_website,Registered users must be required to enter login details before accessing their information.
+interactive_website,Admin must be able to update website information.
+interactive_website,The system must have a consistent look and feel throughout the website.
+interactive_website,The system should provide on-line help in website navigation.
+interactive_website,The system should provide a search facility that will allow full-text searching of all web pages that the user is permitted to access.
+interactive_website,The system shall allow the user's status to be stored for the next time he returns to the web site.
+interactive_website,Transaction data must be transmitted in encrypted form.
+interactive_website,The system shall provide a web page that explains how to navigate the site. This page should be customized based on what pages that user is allowed to access.
+interactive_website,The help page should be accessible from all other pages.
+ecommerce_website,The system must Display accurate up-to-date product information.
+ecommerce_website,Product owners will be allowed to maintain the data about their products directly.
+ecommerce_website,The system should reduce the workload of Customer Service as customers are able to find the information they need from the web-site.
+ecommerce_website,Site navigation data could be sent to the Marketing Department. Understanding how a customer uses the web site to make a purchase will result in improvements in getting and keeping customers.
+ecommerce_website,Purchase information will be sent directly to Shipping for inventory control and order processing.
+ecommerce_website,The system should customize product offerings to specific users.
+ecommerce_website,The system must allow customers to place an order through the website.
+ecommerce_website,The platform should provide search and navigation functionalities for users to find and browse content.
+ecommerce_website,A user who already knows what product he is interested in should be able to locate and view that page in x seconds.
+ecommerce_website,The number of web pages navigated to access product information from the top page should not exceed x.
+work_or_school_website,Website should allow users to upload files for processing.
+work_or_school_website,Website must require users to login to access certain features.
+work_or_school_website,Admin must be authorized by company executives to create an account to access the web portal to the websites database and backend.
+work_or_school_website,Admin must be able to manage user account information.
+work_or_school_website,Admin must be able to remove or ban user accounts.
+work_or_school_website,Admin must be able to authorize a user account password change.
+educational_website,Lecturers must be able to enter student course grades.
+educational_website,Lecturers must be able to manage their courses.
+educational_website,Lecturers must be able to give feedback on student grades.
+educational_website,Students should be able to view their course grades.
+educational_website,Students should be able to register courses.
+educational_website,Students should be able to schedule an appointment with teachers or other personnel online.
+educational_website,Public must be able to access institute information.
+educational_website,Public must be able to apply for acceptance."
+transaction_system,Purchase information will be sent directly to Accounting allowing for more accurate and timely billing.
+transaction_system,The application should provide a secure environment for financial transactions.
+transaction_system,The application should support features such as two-factor authentication encryption and secure login.
+transaction_system,The application should provide a transaction management system to track and manage transactions between users.
+transaction_system,The system should be able to handle multiple transactions at the same time and should support features such as refund and cancellation of transactions.
+transaction_system,The application should provide reporting and analytics functionalities for users to track their financial activities.
+transaction_system,Users should be able to view their transaction history balance and financial reports.
+transaction_system,The application should provide notifications to users for transaction status updates and other important events such as account balance updates and payment confirmation.
+transaction_system,The application should be able to integrate with other third-party systems such as accounting software or e-commerce platforms to automate the transaction process.
+transaction_system,The application should comply with financial regulations such as KYC (Know Your Customer) AML (Anti-Money Laundering) and PCI-DSS (Payment Card Industry Data Security Standard).
+transaction_system,The application should integrate with one or more payment gateways to enable users to make and receive payments.
+online_system,The application must provide user management functionalities such as sign up login and password reset.
+online_system,The user must be able to create a profile with basic details such as name email and profile picture.
+online_system,The application should also provide the ability for the user to edit and update their profile information.
+online_system,User needs to tap the chat button and needs to select option of chat i.e. they wantto do text chat or voice chat.
+online_system,Users should be able to upload edit and delete their own content.
+online_system,The application should provide the ability for users to share content such as text photos and videos.
+online_system,The system has to be online 24*7. There is no place for extended downtime.
+social_network,The application should allow users to connect with other users by following or friending them.
+social_network,Users should be able to view other user profiles and search for users by name or interests.
+social_network,The application should provide the ability for users to join groups based on common interests.
+social_network,The application should provide the ability for users to like comment and share content from other users.
+social_network,The application should provide a messaging system for users to communicate with each other.
+social_network,Users should be able to send private messages to other users and create group chats.
+social_network,The application should provide the ability for users to block and report other users for inappropriate behavior.
+social_network,The application should provide analytics for content performance such as views and engagement.
+social_network,The application should provide analytics for users to track their account activity such as followers likes and comments.
+streaming_service,The platform should provide a content management system to manage video content.
+streaming_service,The system should support features such as content upload categorization metadata management and content library organization.
+streaming_service,The platform should provide video streaming services to users with a high-quality video player that supports various video formats.
+streaming_service,The platform should support adaptive streaming to optimize the user's viewing experience based on their internet connection speed.
+streaming_service,The platform should provide personalization and recommendation functionalities to users.
+streaming_service,The platform should analyze the user's viewing history and preferences to recommend new content based on their interests.
+streaming_service,Users should be able to search for content based on various criteria such as title genre and actor.
+streaming_service,The platform should provide analytics and reporting functionalities to track user engagement content performance and revenue generation.
+streaming_service,The platform should provide a dashboard to view statistics such as user behavior viewing patterns and subscription data.
+file_storage_system,The system should provide a file management system to manage files.
+file_storage_system,The system should support features such as file upload categorization metadata management and file library organization.
+file_storage_system,The system should provide access control functionalities to ensure that only authorized users can access files.
+file_storage_system,The access control system should support role-based access control and provide different levels of access based on user roles.
+file_storage_system,The system should provide a secure environment for file storage and access.
+file_storage_system,The system should also have measures to prevent unauthorized access and data breaches.
+file_storage_system,The system should provide backup and recovery functionalities to prevent data loss due to system failures or human error.
+file_storage_system,The system should support periodic backups and have a recovery mechanism in place to restore lost data.
+file_storage_system,The system should provide version control functionalities to track changes made to files.
+file_storage_system,The system should allow users to view and restore previous versions of files.
+file_storage_system,The system should provide synchronization functionalities to ensure that files are up to date on all devices.
+file_storage_system,The system should automatically synchronize files when changes are made and the user should be able to control when synchronization occurs.
+file_storage_system,The system should provide collaboration functionalities to allow multiple users to work on the same file.
+file_storage_system,The system should allow users to share files with other users and provide collaboration tools such as commenting and task assignment.
+file_storage_system,The system should provide reporting and analytics functionalities to track file usage user behavior and storage capacity.
+file_storage_system,The system should provide a dashboard to view statistics such as file upload and download data storage usage and user activity.
