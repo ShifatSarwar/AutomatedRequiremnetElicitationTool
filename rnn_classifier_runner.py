@@ -20,8 +20,6 @@ NUM_CLASSES = 2
 
 
 def reconvertData():
-    # df,df2 = loadData()
-
     TEXT = torchtext.legacy.data.Field(
         tokenize='spacy',
         tokenizer_language='en_core_web_sm'
@@ -121,11 +119,6 @@ with open('results/final_report.txt', 'a') as f3:
         f3.write(out_line)
         f3.write('\n')
 
-
-# text = 'The system should work on Linux and Windows.'
-# preprocessed_text = [tok.text for tok in nlp.tokenizer(text)]
-# preprocessed_text = [TEXT.vocab.stoi[word] for word in preprocessed_text]
-# tensor_text = torch.LongTensor(preprocessed_text).to(DEVICE)
 
 
 

@@ -33,12 +33,6 @@ def run_nn_model(user_story):
     model.load_state_dict(model_state)
     model.eval()
 
-    # with open('dataset/user_story.txt', 'r') as f:
-    #     user_story = f.readline()
-
-    # user_story = input("Enter your story: ")
-
-    #convert command into a tokenized array
     command = tokenize(user_story)
 
     #get arrays to compare and predict

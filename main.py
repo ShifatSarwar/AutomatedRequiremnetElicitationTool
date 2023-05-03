@@ -12,10 +12,8 @@ if __name__ == "__main__":
     # load CSV file as a dataframe
     pd.set_option('display.max_colwidth', 1000)
     df = pd.read_csv('dataset/requirement_guide.csv')
-
-    # getAccuracy('KNN')
-    # getAccuracy('SVM')
     
+    # Generates the initial set of requirement from pre-trained GPT-3 model
     gptOutput = getGPT3_Result(fileLoc)
 
     for outs in gptOutput:
@@ -32,7 +30,8 @@ if __name__ == "__main__":
                 if outs not in reqList:
                     f.write(outs)
                     f.write('\n')
-
+            
+            # Run the classifier model to find software type that can be associated with previously available type based requirement.
             response_list = run_nn_model(outs)
 
             if response_list != ['']:
@@ -52,4 +51,5 @@ if __name__ == "__main__":
 
 
     print('End')
+# Importing the rnn_classifier runner executes the classification
 import rnn_classifier_runner

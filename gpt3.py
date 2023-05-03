@@ -1,8 +1,8 @@
 import openai
 
-
+# Edit API_KEY by adding your personal key here
 def getGPT3_Result(filename):
-    API_KEY = "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"
+    API_KEY = ""
     openai.api_key = API_KEY
     model = 'text-davinci-003'
     with open(filename, 'r') as file:
