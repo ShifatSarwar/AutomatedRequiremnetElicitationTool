@@ -21,7 +21,8 @@ def createCSV():
         f.close()
     
     name = 'results/divided_elements_NFR.csv'
-    header = ['req_id', 'nfr_type', 'goal', 'metric', 'scope', 'constraints']
+    # header = ['req_id', 'nfr_type', 'goal', 'metric', 'scope', 'constraints']
+    header = ['req_id', 'nfr_type', 'metric', 'operation', 'input', 'pre-condition', 'actor', 'event', 'post-condition', 'output']
     with open(name, 'w', encoding='UTF8', newline='') as f:
         writer = csv.writer(f)
         writer.writerow(header)
@@ -71,29 +72,52 @@ def divideAndSetNFR(idx, nfr):
             nfr_type = x
             break
 
-    print(nfr_type)
-    dividedElements = gpt3.get_NFR_task(nfr)
-    goal = ""
-    scope = ""
+    dividedElements = gpt3.divideElements(nfr)
+    operation = ""
+    input_data = ""
+    output = ""
+    actor = ""
+    event = ""
+    pre_condition = ""
+    post_condition = ""
     metric = ""
-    constraints = ""
+
     for line in dividedElements:
         line = line.replace(",","")
-        if line.startswith("Goal:"):
-            goal = line.replace("Goal:", "").strip()
-        elif line.startswith("Metrics:"):
-            metric = line.replace("Metrics:", "").strip()
-        elif line.startswith("Scope:"):
-            scope = line.replace("Scope:", "").strip()
-        elif line.startswith("Constraints:"):
-            constraints = line.replace("Constraints:", "").strip()
-
+        if line.startswith("Operation:"):
+            operation = line.replace("Operation:", "").strip()
+            if operation == '':
+                operation = 'None'
+        elif line.startswith("Input:"):
+            input_data = line.replace("Input:", "").strip()
+            if input_data == '':
+                input_data = 'None'
+        elif line.startswith("Any number value with units:"):
+            metric = line.replace("Any number value with units:", "").strip()
+        elif line.startswith("Output:"):
+            output = line.replace("Output:", "").strip()
+            if output == '':
+                output = 'None'
+        elif line.startswith("Actor:"):
+            actor = line.replace("Actor:", "").strip()
+            if actor == '':
+                actor = 'None'
+        elif line.startswith("Event:"):
+            event = line.replace("Event:", "").strip()
+            if event == '':
+                event = 'None'
+        elif line.startswith("Pre-Condition:"):
+            pre_condition = line.replace("Pre-Condition:", "").strip()
+            if pre_condition == '':
+                pre_condition = 'None'
+        elif line.startswith("Post-Condition:"):
+            post_condition = line.replace("Post-Condition:", "").strip()
+            if post_condition == '':
+                post_condition = 'None'
     
-    final_line = str(idx)+','+nfr_type+','+goal+','+scope+','+metric+','+constraints
+    final_line = str(idx)+','+nfr_type+','+metric+','+operation+','+input_data+','+pre_condition+','+actor+','+event+','+post_condition+','+output
+    print(metric)
     addLineNFR(final_line)
-
-
-
 
 def divideAndSet(idx,dividedElements):
     operation = ""
@@ -108,34 +132,70 @@ def divideAndSet(idx,dividedElements):
         line = line.replace(",","")
         if line.startswith("Operation:"):
             operation = line.replace("Operation:", "").strip()
+            if operation == '':
+                operation = 'None'
         elif line.startswith("Input:"):
             input_data = line.replace("Input:", "").strip()
+            if input_data == '':
+                input_data = 'None'
         elif line.startswith("Output:"):
             output = line.replace("Output:", "").strip()
+            if not output:
+                output = 'None'
         elif line.startswith("Actor:"):
             actor = line.replace("Actor:", "").strip()
-        elif line.startswith("Actor-Type:"):
-            actor_type = line.replace("Actor-Type:", "").strip()
+            if actor == '':
+                actor = 'None'
         elif line.startswith("Event:"):
             event = line.replace("Event:", "").strip()
+            if event == '':
+                event = 'None'
         elif line.startswith("Pre-Condition:"):
             pre_condition = line.replace("Pre-Condition:", "").strip()
+            if pre_condition == '':
+                pre_condition = 'None'
         elif line.startswith("Post-Condition:"):
             post_condition = line.replace("Post-Condition:", "").strip()
-    
-    final_line = str(idx)+','+operation+','+input_data+','+pre_condition+','+actor+','+actor_type+','+event+','+post_condition+','+output
+            if post_condition == '':
+                post_condition = 'None'
+
+    final_line = str(idx)+','+operation+','+input_data+','+pre_condition+','+actor+','+event+','+post_condition+','+output
     addLine(final_line)
     
-def getRequirment(idx):
-    file_path = 'results/requirement_report.txt'
-    idx = int(idx)+1
+# def getRequirment(idx):
+#     file_path = 'results/requirement_report.txt'
+#     idx = int(idx)+1
+#     index = 0
+#     with open(file_path, 'r') as file:
+#         for line in file:
+#             line = line.strip()  # Remove leading/trailing whitespaces
+#             if index == idx:
+#                 return line
+#             index+=1
+
+def getConflicts():
+    file_path = 'conflicts.txt'
+    line_array = []
     index = 0
+    a1 = []
     with open(file_path, 'r') as file:
         for line in file:
-            line = line.strip()  # Remove leading/trailing whitespaces
-            if index == idx:
-                return line
-            index+=1
+            line = line.strip()
+            if line.startswith('Funtional Conflicts') or line.startswith('Non-Functional Conflicts'):
+                continue
+            else:
+                a1.append(line)
+                if index == 2:
+                    line_array.append(a1)
+                    index = 0
+                    a1 = []
+                else:
+                    index+=1
+    return line_array
+                
+
+
+
 
 
 # # def pos_tagging(text):
