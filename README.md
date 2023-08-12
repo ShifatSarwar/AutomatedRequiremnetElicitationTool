@@ -13,7 +13,7 @@ The Automated Requirement Engineering Toolkit is a powerful software solution th
   * Requirement Resolution through Merging and Prioritization
 
 * Requirement Elicitation and Classification
-<img src="images/pic2.png" alt="Example Image" width="700" height="700">
+<img src="images/pic2.png" alt="Example Image" width="700" height="500">
 
 
 Sample User Idea
@@ -21,17 +21,17 @@ Sample User Idea
 I want my profile to list my upcoming classes and include a link to a detailed page about each so that prospective attendees can find my courses.
 '''
 Generates...
-<img src="images/pic1.png" alt="Example Image" width="200" height="200">
+<img src="images/pic1.png" alt="Example Image" width="700" height="200">
 
 
 * Requirement Conflict Detection
-<img src="images/pic3.png" alt="Example Image" width="200" height="200">
+<img src="images/pic3.png" alt="Example Image" width="700" height="200">
 
 
 The conflict is detected via a rule based approach from elements found after dividing Requirement Statements. Rules are added for both Functional and Nonfunctional Requirement Conflicts. The reason why rules detect conflicts are used to either generate an altered requirement statement, merge two requirements using the help of a common element and remove lower priority requirements.
 
 
-<img src="images/pic4.png" alt="Example Image" width="200" height="200">
+<img src="images/pic4.png" alt="Example Image" width="700" height="200">
 
 Example 1
 '''
