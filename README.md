@@ -3,7 +3,7 @@
 The Automated Requirement Engineering Toolkit is a powerful software solution that leverages cutting-edge machine learning and natural language processing techniques to revolutionize requirement engineering. With three distinct deep-learning models at its core, the toolkit automates requirement elicitation, classification, conflict detection, and resolution. The first model, powered by DaVinci003, directly generates requirements from user input, even accommodating vague ideas. The second model employs a custom neural network to classify similar software types, fetching related requirements from a dataset. A third model, based on RNN-LSTM, classifies requirements as functional or non-functional. This comprehensive toolkit also excels in conflict detection and resolution. It systematically converts natural language requirement statements into elements, analyzes them with predefined rules, and offers efficient conflict resolution methods. By prioritizing and adjusting conflicting requirements based on system type, the toolkit ensures coherence while maintaining accuracy and effectiveness.
 
 * Contributions of Toolkit
-* * Fully Automated Requirement Elicitation Tool
+  * Fully Automated Requirement Elicitation Tool
   * Simple Ill-Formed Idea is enough to start Requirement Elicitation process.
   * Finding Requirements from Software Type.
   * Dataset of Requirement and Software Type.
@@ -13,7 +13,7 @@ The Automated Requirement Engineering Toolkit is a powerful software solution th
   * Requirement Resolution through Merging and Prioritization
 
 * Requirement Elicitation and Classification
-![Alt Text](images/pic2.png)
+![Alt Text](<img src="images/example.png" alt="Example Image" width="300" height="200">)
 
 
 Sample User Idea
