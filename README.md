@@ -13,7 +13,7 @@ The Automated Requirement Engineering Toolkit is a powerful software solution th
   * Requirement Resolution through Merging and Prioritization
 
 * Requirement Elicitation and Classification
-![Alt Text](<img src="images/example.png" alt="Example Image" width="300" height="200">)
+![Alt Text]<img src="images/example.png" alt="Example Image" width="300" height="200">
 
 
 Sample User Idea
